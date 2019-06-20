@@ -1,0 +1,162 @@
+/* Mitchell Jurich
+   Client Side Web Development - Final Project
+   Last Edit: 11/29/17 */
+
+body									{ background-image: url("checker.png"); }
+
+/* Header styling */
+#header									{ font-size: 4vh;
+											color: white;
+											text-shadow: 2px 2px black;
+											width: 100%;
+											height: 8vh;
+											background-color: darkslategray;
+											position: absolute;
+											left: 0;
+											top: 0;
+											z-index: 1; }
+@media screen and (max-width: 500px) {
+	#header { font-size: 6vw; }
+}
+nav             						{ font-size: 5vh;
+											font-weight: bold;
+											line-height: 8vh;
+											text-align: center;
+											vertical-align: middle;
+											width: 8vh;
+											position: absolute;
+											left: 0;
+											top: 0;
+											background-color: darkslategray;
+											cursor: pointer; }
+nav ul									{ list-style: none;
+											margin: 0;
+											padding: 0; }
+nav.inactive ul							{ display: none; }
+nav.active ul							{ display: block; }
+nav ul li								{ width: 10em;
+											background-color: rgb(39, 65, 65);
+											border-bottom: 2px solid black; }
+@media screen and (max-width: 500px) {
+	nav ul li { width: 70vw;
+				font-size: 6vw; }
+}
+#headTable								{ float: right;
+											height: 8vh;
+											vertical-align: middle; }
+#movesCell								{ padding-right: 30px; }
+#parCell								{ text-align: right;
+											padding-right: 15px; }
+
+/* Non-header document content section styling */
+#content								{ width: 100%;
+											height: 92vh;
+											position: absolute; 
+											left: 0;
+											top: 8vh; }
+						
+/* Main menu content styling */
+#logoDiv								{ width: 100%;
+											text-align: center;
+											padding-top: 5vh;
+											padding-bottom: 2.5vh; }
+#logo									{ width: 85vw; }
+.gameInfoDiv							{ width: 75%;
+											margin: auto;
+											font-size: 4vh;
+											color: white;
+											text-shadow: 2px 2px black; }
+#sizeInfo								{ float: left; }
+#parInfo								{ float: right; }
+.sliderDiv								{ text-align: center;
+											padding-top: 2.5vh;
+											padding-bottom: 2.5vh; }
+.sizeSlider								{ -webkit-appearance: none;
+											border: 2px solid black;
+											background-color: seashell;
+											width: 75%;
+											height: 5vh;
+											outline: none; }
+.sizeSlider::-webkit-slider-thumb 		{ -webkit-appearance: none;
+											width: 5vh;
+											height: 5vh;
+											cursor: pointer;
+											background-color: mediumseagreen; }
+#playBttnDiv							{ text-align: center; }
+#playBttn								{ width: 40vw; 
+											color: white;
+											text-shadow: 2px 2px black;
+											background-color: slategray; }
+
+/* In game content styling */
+canvas									{ width: 100%;
+											height: 70vh; }
+#colorButtonsTable						{ margin: auto; }
+input[type = button]					{ border: 2px solid black;
+											width: 20vw;
+											height: 8vh;
+											font-size: 4vh;
+											cursor: pointer; }
+@media screen and (max-width: 500px) {
+	input[type = button] { font-size: 6vw; }
+}
+#seashellBttn							{ background-color: seashell; }
+#slategrayBttn							{ background-color: slategray; }
+#mediumseagreenBttn						{ background-color: mediumseagreen; }
+#orchidBttn								{ background-color: orchid; }
+#coralBttn								{ background-color: coral; }
+#crimsonBttn							{ background-color: crimson; }
+
+/* modal and modal content styling */
+#modal									{ display: none;
+											position: fixed;
+											padding-top: 30vh;
+											z-index: 2;
+											left: 0;
+											top: 0;
+											width: 100%;
+											height: 100%;
+											background-color: rgba(0, 0, 0, .5); }
+#modalHeader							{ padding: 10px 16px;
+											font-size: 4vh;
+											color: white;
+											text-shadow: 2px 2px black;
+											background-color: darkslategray; }
+#modalClose								{ float: right;
+											padding-right: 5px;
+											cursor: pointer; }
+#modalContent							{ top: 50vh;
+											width: 75vw;
+											margin: auto;
+											padding: 0px;
+											background-color: rgb(95, 141, 148); }
+#modalFooter							{ padding: 10px 16px;
+											font-size: 4vh;
+											color: white;
+											text-shadow: 1px 1px black;
+											background-color: darkslategray; }
+#modalText								{ font-size: 3vh;
+											text-align: center;
+											padding: 16px; }
+#modalGameInfoDiv						{ color: black;
+											font-size: 3.5vh; 
+											text-shadow: none; }
+.modalBttn								{ color: white;
+											text-shadow: 2px 2px black;
+											background-color: slategray; }
+input[type = button].modalLeftBttn		{ width: 49%; }
+input[type = button].modalRightBttn		{ width: 49%;
+											float: right; }
+input[type = button].modalCenterBttn	{ width: 100%; }
+
+/* Statistics table styling */
+#statsTable								{ border-collapse: collapse;
+											width: 100%; }
+#statsTable tr							{ background-color: rgb(41, 69, 69);
+											color: white;
+											font-size: 2vw;
+											text-shadow: 1px 1px black; }
+#statsTable tr:nth-child(even) 			{ background-color: rgb(39, 65, 65); }
+#statsTable td							{ border: 2px solid black;
+											padding: 4px;
+											text-align: center; }
